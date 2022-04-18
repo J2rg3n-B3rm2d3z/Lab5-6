@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mfragment_home">
+
+    <!--Autogenerate Code-->
+    <!--Change name of fragment to item's name menu-->
+
+    <fragment
+        android:id="@+id/mfragment_home"
+        android:name="com.laboratorios.lab56.views.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_galleryFragment"
+            app:destination="@id/mfragment_gallery" />
+    </fragment>
+    <fragment
+        android:id="@+id/mfragment_artist"
+        android:name="com.laboratorios.lab56.views.ArtistFragment"
+        android:label="fragment_artist"
+        tools:layout="@layout/fragment_artist" >
+        <action
+            android:id="@+id/action_artistFragment_to_eventFragment"
+            app:destination="@id/mfragment_event" />
+        <action
+            android:id="@+id/action_artistFragment_to_artistDetailsFragment"
+            app:destination="@id/martistDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mfragment_gallery"
+        android:name="com.laboratorios.lab56.views.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_galleryFragment_to_artistFragment"
+            app:destination="@id/mfragment_artist" />
+        <action
+            android:id="@+id/action_galleryFragment_to_galleryDetailsFragment"
+            app:destination="@id/mgalleryDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mfragment_event"
+        android:name="com.laboratorios.lab56.views.EventFragment"
+        android:label="fragment_event"
+        tools:layout="@layout/fragment_event" >
+        <action
+            android:id="@+id/action_eventFragment_to_eventUbicationFragment"
+            app:destination="@id/meventUbicationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mgalleryDetailsFragment"
+        android:name="com.laboratorios.lab56.views.GalleryDetailsFragment"
+        android:label="fragment_gallery_details"
+        tools:layout="@layout/fragment_gallery_details" />
+    <fragment
+        android:id="@+id/martistDetailsFragment"
+        android:name="com.laboratorios.lab56.views.ArtistDetailsFragment"
+        android:label="fragment_artist_details"
+        tools:layout="@layout/fragment_artist_details" />
+    <fragment
+        android:id="@+id/meventUbicationFragment"
+        android:name="com.laboratorios.lab56.views.EventUbicationFragment"
+        android:label="fragment_event_ubication"
+        tools:layout="@layout/fragment_event_ubication" />
+</navigation>

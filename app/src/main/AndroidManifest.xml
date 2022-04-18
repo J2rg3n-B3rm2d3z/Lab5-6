@@ -10,13 +10,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab56">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".views.SplashScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.CreateAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.MenuActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false">
         </activity>
     </application>
 

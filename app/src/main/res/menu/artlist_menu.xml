@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mfragment_home"
+        android:title="@string/strInicio"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/mfragment_gallery"
+        android:title="@string/strGaleria"
+        android:icon="@drawable/ic_galeria"/>
+    <item
+        android:id="@+id/mfragment_artist"
+        android:title="@string/strArtista"
+        android:icon="@drawable/ic_artista"/>
+    <item
+        android:id="@+id/mfragment_event"
+        android:title="@string/strEvento1"
+        android:icon="@drawable/ic_evento"/>
+</menu>
