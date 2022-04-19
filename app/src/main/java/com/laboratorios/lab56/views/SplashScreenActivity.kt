@@ -8,22 +8,33 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import com.laboratorios.lab56.R
+import com.laboratorios.lab56.databinding.ActivitySplashScreenBinding
 import java.io.IOException
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivitySplashScreenBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         try {
             super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_splash_screen)
+
+            //Binding use to set View in the screen
+
+            binding = ActivitySplashScreenBinding.inflate(layoutInflater)
+            val view = binding.root
+            setContentView(view)
 
             //Animation in the activity Code
 
             val animlogo = AnimationUtils.loadAnimation(this, R.anim.animation)
-            val imgLogo: ImageView = findViewById(R.id.imgLogo)
+            val imgLogo: ImageView = binding.imgLogo
             imgLogo.startAnimation(animlogo)
 
-            val intent = Intent(this, MenuActivity::class.java)
+            //Control the actions in the animation
+
+            val intent = Intent(this, LoginActivity::class.java)
             animlogo.setAnimationListener(object : Animation.AnimationListener {
                 override fun onAnimationStart(animation: Animation?) {
 
