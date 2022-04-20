@@ -26,7 +26,13 @@ class LoginActivity : AppCompatActivity() {
     fun onClickArteLista (view: View){
         val intent = Intent(this, MenuActivity::class.java)
         startActivity(intent)
-        finish()
+    }
+
+    //Function to button to switch a createAccount Activity
+
+    fun onClickCrearCuenta(view: View) {
+        val intent = Intent(this, CreateAccountActivity::class.java)
+        startActivity(intent)
     }
 
 }

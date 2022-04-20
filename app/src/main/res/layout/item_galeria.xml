@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/alto1"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/margen1"
+    android:layout_marginBottom="@dimen/margen">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imgFotoPintura"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alto1"
+            android:background="@drawable/img_arte2"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/strTituloHome">
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:padding="@dimen/margenizq"
+            android:paddingBottom="@dimen/margen"
+            android:background="@color/colorbackgroundcard">
+
+            <TextView
+                android:id="@+id/tvNombreArtista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strArtista"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tamtexto2"
+                />
+
+            <TextView
+                android:id="@+id/tvTituloPintura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strTituloArte"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tamtexto1"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chkLikeDibujo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox_selector"/>
+
+
+                <TextView
+                    android:id="@+id/tvLikePintura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/strMeGusta"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tamtexto2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margen"
+                    />
+
+                <TextView
+                    android:id="@+id/tvPrecioPintura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/strPrecioPintura"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tamtexto2"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margenizq"/>
+
+                <TextView
+                    android:id="@+id/tvMonedaPintura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/strMoneda"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tamtexto2"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>

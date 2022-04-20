@@ -1,14 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.GalleryDetailsFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.GalleryDetailsFragment"
+    android:fitsSystemWindows="true">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarcol"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alto1"
+        android:theme="@style/NoActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/idtoolcolapse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="@color/rosa">
+            <ImageView
+                android:id="@+id/imgDetalleArte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_arte2"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                android:contentDescription="@string/strPrecioPintura"/>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tooldetallegaleria"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margentop1"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:layout_collapseMode="pin"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvArtistaDetalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/tamtexto1"
+                android:text="@string/strNombreArtista"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/margen"/>
+            <TextView
+                android:id="@+id/tvCategoriaDetalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/tamtexto2"
+                android:text="@string/strCategoria"
+                android:layout_marginStart="@dimen/margen"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/alto3"
+                android:background="@color/rosa"/>
+
+            <TextView
+                android:id="@+id/tvNombrePinturaDetalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/tamtexto1"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/strTituloArte"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/margen"/>
+
+            <TextView
+                android:id="@+id/txtDetalleArte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/tamtexto3"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/strDescripcionArte"
+                android:paddingTop="@dimen/margen"
+                android:paddingStart="@dimen/margen1"
+                android:paddingEnd="@dimen/margen1"
+                android:layout_marginStart="@dimen/margen"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

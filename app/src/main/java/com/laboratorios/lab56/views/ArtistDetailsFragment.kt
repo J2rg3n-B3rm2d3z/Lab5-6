@@ -10,7 +10,6 @@ import com.laboratorios.lab56.R
 
 class ArtistDetailsFragment : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -18,6 +17,4 @@ class ArtistDetailsFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_artist_details, container, false)
     }
-
-
 }

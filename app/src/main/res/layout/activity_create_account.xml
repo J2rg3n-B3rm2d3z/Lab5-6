@@ -1,9 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.CreateAccountActivity">
+    tools:context=".views.CreateAccountActivity"
+    android:fitsSystemWindows="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Custom bar-->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/NoActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarCrearCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margen"
+                android:src="@drawable/logo_artelistatool"
+                android:contentDescription="@string/strCreaUna"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margen">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margentop">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tvEmailCuenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hemail"
+                    android:maxLength="25"
+                    android:drawablePadding="@dimen/margender"
+                    android:drawableStart="@drawable/ic_username"
+                    android:gravity="start|center_horizontal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tvPasswordCuenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hPassword"
+                    android:maxLength="12"
+                    android:drawablePadding="@dimen/margender"
+                    android:drawableStart="@drawable/ic_password"
+                    android:gravity="start|center_horizontal"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tvConfirmarPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hConfirmarPassword"
+                    android:maxLength="12"
+                    android:drawablePadding="@dimen/margender"
+                    android:drawableStart="@drawable/ic_password"
+                    android:gravity="start|center_horizontal"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCrearCuenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margentop1"
+                android:backgroundTint="@color/rosa"
+                android:text="@string/strCrearCuenta"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
