@@ -5,11 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".views.EventFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_eventos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Event" />
+        android:layout_marginBottom="@dimen/margentop1"/>
 
 </FrameLayout>

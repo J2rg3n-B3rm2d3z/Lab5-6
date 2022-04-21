@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
     tools:context=".views.EventUbicationFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarEvento"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margentop1"
+        android:background="@color/rosa"
+        android:theme="@style/Theme.Design.NoActionBar">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarUbicacionEvento"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margentop1"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:navigationIcon="?attr/homeAsUpIndicator">
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_mapa"
+        android:contentDescription="@string/strEventoCategoria"/>
 
-</FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

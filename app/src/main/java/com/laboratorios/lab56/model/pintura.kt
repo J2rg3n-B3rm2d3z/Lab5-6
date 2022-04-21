@@ -5,5 +5,4 @@ package com.laboratorios.lab56.model
 class pintura(var ArtistaPintura:String="",
               var PrecioPintura:String="",
               var UrlPintura:String="",
-              var TituloPintura:String=""){
-}
+              var TituloPintura:String="")

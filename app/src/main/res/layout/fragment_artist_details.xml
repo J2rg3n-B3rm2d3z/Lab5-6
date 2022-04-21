@@ -1,14 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
     tools:context=".views.ArtistDetailsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarartista"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margentop1"
+        android:background="@color/rosa"
+        android:theme="@style/Theme.Design.NoActionBar">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tooldetalleartista"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margentop1"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:navigationIcon="?attr/homeAsUpIndicator">
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgPerfil"
+                android:layout_width="@dimen/alto1"
+                android:layout_height="@dimen/alto1"
+                android:src="@drawable/img_perfil3"
+                android:layout_marginTop="@dimen/alto4"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+            <TextView
+                android:id="@+id/tvNombrePerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/strNombreArtistaPerfil"
+                android:textSize="@dimen/tamtexto1"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/imgPerfil"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+            </TextView>
+            <TextView
+                android:id="@+id/tvCiudadPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strCiudad"
+                android:textSize="@dimen/tamtexto3"
+                app:layout_constraintTop_toBottomOf="@id/tvNombrePerfil"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+            </TextView>
+            <TextView
+                android:id="@+id/tvAcercaDe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strAcercaDeMi"
+                android:textSize="@dimen/tamtexto3"
+                android:textColor="@color/purple_500"
+                app:layout_constraintTop_toBottomOf="@id/tvCiudadPerfil"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+            </TextView>
+            <Button
+                android:id="@+id/btnAcercaDe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_up"
+                app:layout_constraintTop_toBottomOf="@id/tvAcercaDe"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+            </Button>
+            <TextView
+                android:id="@+id/tvDescripcionAcerca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/alto2"
+                android:layout_marginRight="@dimen/alto2"
+                android:text="@string/strDescripcionQuienSoy"
+                android:textSize="@dimen/tamtexto2"
+                android:textAlignment="center"
+                android:textColor="@color/cardview_dark_background"
+                app:layout_constraintTop_toBottomOf="@id/btnAcercaDe"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:gravity="center_horizontal">
+            </TextView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/btnAcercaDe">
+            </View>
+            <ImageView
+                android:id="@+id/imgTwitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_twitter"
+                android:contentDescription="@string/strTituloArte"
+                android:layout_marginTop="@dimen/margen"
+                app:layout_constraintTop_toBottomOf="@id/tvDescripcionAcerca"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+            </ImageView>
+            <TextView
+                android:id="@+id/txtHastag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strNombreTwitter"
+                android:textColor="@color/cardview_dark_background"
+                app:layout_constraintTop_toBottomOf="@id/imgTwitter"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+            </TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

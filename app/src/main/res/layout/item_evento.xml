@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_boton"
+    android:layout_marginTop="@dimen/margen1"
+    android:padding="@dimen/margen1">
+    
+    <TextView
+        android:id="@+id/tvEventoHora1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strHora1"
+        android:textSize="@dimen/tamtexto3"
+        android:textColor="@color/rosa"
+        android:layout_marginStart="@dimen/margender"
+        android:layout_marginTop="@dimen/margenizq"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tvEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strEvento"
+        android:textSize="@dimen/tamtexto2"
+        android:layout_marginTop="@dimen/margen"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tvEventoHora1"
+        />
+    <TextView
+        android:id="@+id/tvEventoCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strEventoCategoria"
+        android:textSize="@dimen/tamtexto3"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvEvento"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tvEventoHora1"
+        />
+
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>

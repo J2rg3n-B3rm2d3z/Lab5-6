@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgArtista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_artista"
+        android:paddingStart="@dimen/margen"
+        android:paddingTop="@dimen/margen"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:contentDescription="@string/strDescripcionArte"
+        tools:ignore="RtlSymmetry" />
+    <TextView
+        android:id="@+id/tvArtistaNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strNombreArtista"
+        android:textSize="@dimen/tamtexto2"
+        android:textStyle="bold"
+        android:paddingTop="@dimen/margen"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/imgArtista"/>
+    <TextView
+        android:id="@+id/tvtArtistaCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strCategoriaArtista"
+        app:layout_constraintLeft_toRightOf="@+id/imgArtista"
+        app:layout_constraintTop_toBottomOf="@+id/tvArtistaNombre" />
+    <TextView
+        android:id="@+id/tvArtistaPais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strPaisArtista"
+        android:paddingTop="@dimen/margen1"
+        android:paddingEnd="@dimen/margen1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="RtlSymmetry" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="@dimen/margen"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvtArtistaCategoria">
+    </View>
+</androidx.constraintlayout.widget.ConstraintLayout>
