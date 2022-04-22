@@ -48,6 +48,7 @@ class GalleryDetailsFragment : DialogFragment() {
         }
     }
 
+    //Fullscreen dialog
 
     override fun onStart() {
         super.onStart()

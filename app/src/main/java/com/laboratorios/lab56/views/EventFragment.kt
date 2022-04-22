@@ -27,10 +27,14 @@ class EventFragment : Fragment(), eventoListener {
         fbinding = FragmentEventBinding.inflate(layoutInflater)
         val view = binding.root
 
+        //setup recycler view
+
         val reciclerevento = binding.rvEventos
         val linearmanager = LinearLayoutManager(context)
         linearmanager.orientation = LinearLayoutManager.VERTICAL
         reciclerevento.layoutManager = linearmanager
+
+        //Start recycler view
 
         val adapter = adapter_evento(this, GetEvento(), R.layout.item_evento, context)
         reciclerevento.adapter = adapter
@@ -38,9 +42,13 @@ class EventFragment : Fragment(), eventoListener {
         return view
     }
 
+    //Get the fragment in the Listener
+
     override fun onEventoClicked(Evento: evento, position: Int) {
         NavHostFragment.findNavController(this).navigate(R.id.meventUbicationFragment)
     }
+
+    //Cargar eventos
 
     private fun GetEvento(): MutableList<evento>{
         val EventoList: MutableList<evento> = ArrayList()
