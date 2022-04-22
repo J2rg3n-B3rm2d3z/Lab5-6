@@ -28,6 +28,8 @@ class EventUbicationFragment : DialogFragment() {
         return view
     }
 
+    //Setup thee toolbar
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val toolbar: Toolbar = binding.toolbarUbicacionEvento
@@ -40,6 +42,8 @@ class EventUbicationFragment : DialogFragment() {
             Navigation.findNavController(it).navigateUp()
         }
     }
+
+    //Fullscreen dialog
 
     override fun onStart() {
         super.onStart()

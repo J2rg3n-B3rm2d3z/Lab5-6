@@ -25,22 +25,28 @@ class ArtistFragment : Fragment() , artista_listener {
         fbinding = FragmentArtistBinding.inflate(layoutInflater)
         val view = binding.root
 
-        //----------------------
+        //setup recycler view
+
         val reciclerartista = binding.rvArtista
         val linearmanager = LinearLayoutManager(context)
         linearmanager.orientation = LinearLayoutManager.VERTICAL
         reciclerartista.layoutManager = linearmanager
+
+        //Start recycler view
 
         val adapter = adapter_artista(this, GetArtista(), R.layout.item_artista, context)
         reciclerartista.adapter = adapter
         return view
     }
 
+    //Get the fragment in the Listener
+
     override fun onArtistaClicked(Artista: artista, position: Int) {
         NavHostFragment.findNavController(this).navigate(R.id.martistDetailsFragment)
     }
 
     //Cargar obras de arte
+
     private fun GetArtista(): MutableList<artista>{
         val artistaList: MutableList<artista> = ArrayList()
         artistaList.add(artista("Haniel Herrera","Oleo","Nicaragua"))

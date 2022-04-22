@@ -23,9 +23,13 @@ class ArtistDetailsFragment : DialogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
+
         fbinding = FragmentArtistDetailsBinding.inflate(layoutInflater)
         val view = binding.root
+
+        //Code to use the button to open n close
 
         binding.btnAcercaDe.setOnClickListener{
             if(binding.tvDescripcionAcerca.visibility==View.VISIBLE){
@@ -47,6 +51,8 @@ class ArtistDetailsFragment : DialogFragment() {
         return view
     }
 
+    //Setup thee toolbar
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val toolbar: Toolbar = binding.tooldetalleartista
@@ -61,6 +67,7 @@ class ArtistDetailsFragment : DialogFragment() {
 
     }
 
+    //Fullscreen dialog
 
     override fun onStart() {
         super.onStart()

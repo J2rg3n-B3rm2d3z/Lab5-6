@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lista de Arte</string>
-    <string name="strlogoArteLista">Lista de Arte</string>
+    <string name="app_name">Formula1-Fans destacados</string>
+    <string name="strlogoArteLista">Formula1-Fans destacados</string>
     <string name="hUserName">Usuario</string>
     <string name="hPassword">Contraseña</string>
     <string name="strContrasenia">Contraseña</string>
@@ -11,17 +11,17 @@
     <string name="hemail">Email</string>
     <string name="hConfirmarPassword">Confirmar password</string>
     <string name="strCrearCuenta">Crear cuenta</string>
-    <string name="strTituloHome">Enamorados del arte desde 2004</string>
-    <string name="strTituloHomeVistas">1,001,937 obras de arte y 143,544 artistas</string>
+    <string name="strTituloHome">Fans de la formula1</string>
+    <string name="strTituloHomeVistas">Aplicacion para fans destacados</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="strArtista">Artista</string>
+    <string name="strArtista">Corredores</string>
     <string name="strInicio">Inicio</string>
-    <string name="strEvento">Exposición Primavera en Oleo</string>
+    <string name="strEvento">Carrera de primavera</string>
     <string name="strEvento1">Evento</string>
-    <string name="strGaleria">Galería</string>
-    <string name="strNombreArtista">Argentina Vargas</string>
-    <string name="strTituloArte">Las mil y una noche</string>
+    <string name="strGaleria">Pistas</string>
+    <string name="strNombreArtista">Carlos Sainz</string>
+    <string name="strTituloArte">Carrera final</string>
     <string name="strMeGusta">Me gusta</string>
     <string name="strPrecioPintura">1,200.00</string>
     <string name="strMoneda">$</string>
@@ -31,15 +31,15 @@
     <string name="strCategoria">Oleo</string>
 
 
-    <string name="strNombreArtistaPerfil">Rodrigo Matus Lazo</string>
-    <string name="strCiudad">Managua, Nicaragua</string>
+    <string name="strNombreArtistaPerfil">Carlos Sainz</string>
+    <string name="strCiudad">Madrid,España</string>
     <string name="strAcercaDeMi">Acerca de mí</string>
-    <string name="strNombreTwitter">\@RafaelLopez</string>
-    <string name="strDescripcionQuienSoy">Nací en la capital de Nicaragua, mi pasión ha sido la pintura en Oleo, siendo mis favoritas las pinturas en oleo. Durante niño me inicié en la pintura de forma nata, luego fui perfeccionando mi técnica en escuelas profesionales. Tengo mas de 10 años de experiencia en pintura.</string>
-    <string name="strCategoriaArtista">Artista plástico</string>
-    <string name="strPaisArtista">Nicaragua</string>
+    <string name="strNombreTwitter">\@Carlossainz55</string>
+    <string name="strDescripcionQuienSoy">Nací en España Madrid, soy corredor para el equipo de ferrari de de formula1, esta pasion fui inspirada en gran parte gracias a mi padre que me enseño sus pasos</string>
+    <string name="strCategoriaArtista">Rancing Driver</string>
+    <string name="strPaisArtista">España</string>
     <string name="strHora1">09:00AM</string>
-    <string name="strEventoCategoria">Pintura en Oleo</string>
+    <string name="strEventoCategoria">Carrera de prueba</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="strMapaUbicacion">Mapa de Ubicación Geográfica</string>
