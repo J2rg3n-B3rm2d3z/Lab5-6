@@ -10,6 +10,8 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.laboratorios.lab56.R
+import com.laboratorios.lab56.databinding.FragmentGalleryBinding
+import com.laboratorios.lab56.databinding.FragmentGalleryDetailsBinding
 import com.laboratorios.lab56.model.pintura
 import com.laboratorios.lab56.views.adapter.adapter_galeria
 import com.laboratorios.lab56.views.adapter.galeriaListener
@@ -17,6 +19,8 @@ import com.laboratorios.lab56.views.adapter.galeriaListener
 
 class GalleryFragment : Fragment(), galeriaListener {
 
+    private var _binding: FragmentGalleryBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,7 +28,9 @@ class GalleryFragment : Fragment(), galeriaListener {
     ): View? {
         // Inflate the layout for this fragment
 
-        val view:View = inflater.inflate(R.layout.fragment_gallery, container, false)
+        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
+
+        val view = binding.root
 
         //Setup the recycler view
 
@@ -35,8 +41,15 @@ class GalleryFragment : Fragment(), galeriaListener {
 
         val adapter = adapter_galeria(this,getGaleria(), R.layout.item_galeria, context)
         reciclergaleria.adapter = adapter
-        return view
 
+        return view
+    }
+
+    //Override the Ondestroy
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     //Use the interface galeriaListener to use the event

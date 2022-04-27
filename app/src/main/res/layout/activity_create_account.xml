@@ -46,6 +46,10 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:helperText="@string/Requerido"
+                app:helperTextTextColor="@color/design_default_color_error"
+                app:counterEnabled="true"
+                app:counterMaxLength="30"
                 android:layout_marginTop="@dimen/margentop">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -53,7 +57,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/hemail"
-                    android:maxLength="25"
+                    android:maxLength="30"
                     android:drawablePadding="@dimen/margender"
                     android:drawableStart="@drawable/ic_username"
                     android:gravity="start|center_horizontal" />
@@ -63,13 +67,17 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:helperText="@string/Requerido"
+                app:helperTextTextColor="@color/design_default_color_error"
+                app:counterEnabled="true"
+                app:counterMaxLength="8"
                 android:layout_marginTop="@dimen/margen">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tvPasswordCuenta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/hPassword"
-                    android:maxLength="12"
+                    android:maxLength="8"
                     android:drawablePadding="@dimen/margender"
                     android:drawableStart="@drawable/ic_password"
                     android:gravity="start|center_horizontal"
@@ -79,13 +87,17 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:helperText="@string/Requerido"
+                app:helperTextTextColor="@color/design_default_color_error"
+                app:counterEnabled="true"
+                app:counterMaxLength="8"
                 android:layout_marginTop="@dimen/margen">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tvConfirmarPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/hConfirmarPassword"
-                    android:maxLength="12"
+                    android:maxLength="8"
                     android:drawablePadding="@dimen/margender"
                     android:drawableStart="@drawable/ic_password"
                     android:gravity="start|center_horizontal"

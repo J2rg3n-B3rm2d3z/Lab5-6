@@ -12,7 +12,6 @@ import com.laboratorios.lab56.model.evento
 class adapter_evento (private val EventoListener: eventoListener, Evento: MutableList<evento>,
                       resource: Int, context: Context?) :
     RecyclerView.Adapter<adapter_evento.EventoViewHolder>(){
-
     //Values to use
 
     private val evento: MutableList<evento> = Evento

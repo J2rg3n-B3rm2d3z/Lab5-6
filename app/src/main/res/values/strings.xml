@@ -43,5 +43,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="strMapaUbicacion">Mapa de Ubicación Geográfica</string>
     <string name="hello_blank_fragment">Hola a todos</string>
+    <string name="Requerido">Requerido</string>
 </resources>
 
