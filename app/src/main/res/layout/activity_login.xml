@@ -29,7 +29,7 @@
             android:id="@+id/tvlogoArtelista"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/strlogoArteLista"
+            android:text="@string/strTituloHome"
             android:textSize="@dimen/tamtexto1"
             android:textColor="@color/rosa"
             android:textStyle="bold"
@@ -50,6 +50,7 @@
             android:layout_marginEnd="@dimen/margender">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvUserNameContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:helperText="@string/Requerido"
@@ -66,12 +67,13 @@
                     android:inputType="textEmailAddress"
                     android:hint="@string/hemail"
                     android:drawablePadding="@dimen/margender"
-                    android:drawableStart="@drawable/ic_username"
+                    android:drawableStart="@drawable/ic_username_red"
                     android:gravity="start|center_horizontal" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:helperText="@string/Requerido"
@@ -86,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/hPassword"
                     android:drawablePadding="@dimen/margender"
-                    android:drawableStart="@drawable/ic_password"
+                    android:drawableStart="@drawable/ic_password_red"
                     android:maxLength="8"
                     android:gravity="start|center_horizontal"
                     android:inputType="textPassword"/>

@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/strAcercaDeMi"
                 android:textSize="@dimen/tamtexto3"
-                android:textColor="@color/purple_500"
+                android:textColor="@color/rosa"
                 app:layout_constraintTop_toBottomOf="@id/tvCiudadPerfil"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent">

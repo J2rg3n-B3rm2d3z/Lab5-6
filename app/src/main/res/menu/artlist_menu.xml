@@ -7,11 +7,11 @@
     <item
         android:id="@+id/mfragment_gallery"
         android:title="@string/strGaleria"
-        android:icon="@drawable/ic_galeria"/>
+        android:icon="@drawable/ic_pistas"/>
     <item
         android:id="@+id/mfragment_artist"
         android:title="@string/strArtista"
-        android:icon="@drawable/ic_artista"/>
+        android:icon="@drawable/ic_username"/>
     <item
         android:id="@+id/mfragment_event"
         android:title="@string/strEvento1"

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lista de Arte</string>
+    <string name="app_name">F1</string>
     <string name="strlogoArteLista">Lista de Arte</string>
     <string name="hUserName">Usuario</string>
     <string name="hPassword">Contraseña</string>
@@ -14,11 +14,11 @@
     <string name="strTituloHomeVistas">Aplicacion para fans destacados</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="strArtista">Artista</string>
+    <string name="strArtista">Corredores</string>
     <string name="strInicio">Inicio</string>
     <string name="strEvento">Exposición Primavera en Oleo</string>
     <string name="strEvento1">Evento</string>
-    <string name="strGaleria">Galería</string>
+    <string name="strGaleria">Carreras</string>
     <string name="strNombreArtista">Argentina Vargas</string>
     <string name="strDetails">Bahrain Grand Prix</string>
     <string name="strTituloArte">Pista</string>
