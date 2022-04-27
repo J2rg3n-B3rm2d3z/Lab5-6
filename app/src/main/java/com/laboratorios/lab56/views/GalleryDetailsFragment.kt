@@ -40,7 +40,7 @@ class GalleryDetailsFragment : DialogFragment() {
         val toolbar: Toolbar = binding.tooldetallegaleria
 
         (activity as AppCompatActivity).setSupportActionBar(toolbar)
-        toolbar.title = "Arte"
+        toolbar.title = "Pista"
         toolbar.setTitleTextColor(Color.WHITE)
         toolbar.setNavigationOnClickListener {
             dismiss()

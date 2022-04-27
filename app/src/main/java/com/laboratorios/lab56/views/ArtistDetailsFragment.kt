@@ -58,7 +58,7 @@ class ArtistDetailsFragment : DialogFragment() {
         val toolbar: Toolbar = binding.tooldetalleartista
 
         (activity as AppCompatActivity).setSupportActionBar(toolbar)
-        toolbar.title = "Artista"
+        toolbar.title = "Corredor"
         toolbar.setTitleTextColor(Color.WHITE)
         toolbar.setNavigationOnClickListener {
             dismiss()

@@ -13,7 +13,7 @@
             android:id="@+id/imgFotoPintura"
             android:layout_width="match_parent"
             android:layout_height="@dimen/alto1"
-            android:background="@drawable/img_arte2"
+            android:background="@drawable/img4"
             android:scaleType="centerCrop"
             android:contentDescription="@string/strTituloHome">
         </ImageView>
@@ -83,7 +83,6 @@
                     android:id="@+id/tvMonedaPintura"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/strMoneda"
                     android:textColor="@color/white"
                     android:textSize="@dimen/tamtexto2"
                     android:textStyle="bold"
