@@ -12,7 +12,7 @@
     <string name="hConfirmarPassword">Confirmar password</string>
     <string name="strCrearCuenta">Crear cuenta</string>
     <string name="strTituloHome">Fans de la formula1</string>
-    <string name="strTituloHomeVistas">Aplicacion para fans destacados</string>
+    <string name="strTituloHomeVistas">Aplicación para fans destacados</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="strArtista">Corredores</string>
@@ -21,13 +21,14 @@
     <string name="strEvento1">Evento</string>
     <string name="strGaleria">Pistas</string>
     <string name="strNombreArtista">Carlos Sainz</string>
+    <string name="strDetails">Bahrain Grand Prix</string>
     <string name="strTituloArte">Carrera final</string>
     <string name="strMeGusta">Me gusta</string>
     <string name="strPrecioPintura">1,200.00</string>
     <string name="strMoneda">$</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="strDescripcionArte">Carlos PardoTasies nace en San Josè, Costa Rica en 1952, por azares de la vida ya que su familia radica en Puerto Limòn, provincia del paìs donde se crìa hasta los 6 años. Desde pequeño es impactado por los colores de la provincia habitada en su gran mayorìa por gente de raza negra. Empieza a dibujar desde muy pequeña edad los barcos del muelle y las casuchas del lugar. El impacto del color de las frutas, los amaneceres y las gamas usadas en las casas</string>
+    <string name="strDescripcionArte">Bahrain Grand Prix, conocido oficialmente como Bahrain Grand Prix de Gulf Air por motivos de patrocinio, es un evento de carreras de Fórmula Uno en Bahrein. La primera carrera tuvo lugar en el Circuito Internacional de Bahrein el 4 de abril de 2004.</string>
     <string name="strCategoria">Oleo</string>
 
 
@@ -35,7 +36,7 @@
     <string name="strCiudad">Madrid,España</string>
     <string name="strAcercaDeMi">Acerca de mí</string>
     <string name="strNombreTwitter">\@Carlossainz55</string>
-    <string name="strDescripcionQuienSoy">Nací en España Madrid, soy corredor para el equipo de ferrari de de formula1, esta pasion fui inspirada en gran parte gracias a mi padre que me enseño sus pasos</string>
+    <string name="strDescripcionQuienSoy">Nací en España Madrid, soy corredor para el equipo de Ferrari de formula1, esta pasión fue inspirada en gran parte gracias a mi padre que me enseño sus pasos</string>
     <string name="strCategoriaArtista">Rancing Driver</string>
     <string name="strPaisArtista">España</string>
     <string name="strHora1">09:00AM</string>

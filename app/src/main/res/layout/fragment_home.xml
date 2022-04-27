@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".views.HomeFragment"
-    android:background="@drawable/img_arte1">
+    android:background="@drawable/img_bienvenida">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:text="@string/strTituloHome"/>
 
     <TextView
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/strTituloHomeVistas"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="@dimen/tamtexto2"
         android:textStyle="bold"
         android:textAlignment="center"

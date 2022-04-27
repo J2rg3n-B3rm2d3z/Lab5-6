@@ -10,8 +10,8 @@
     <string name="hemail">Email</string>
     <string name="hConfirmarPassword">Confirmar password</string>
     <string name="strCrearCuenta">Crear cuenta</string>
-    <string name="strTituloHome">Enamorados del arte desde 2004</string>
-    <string name="strTituloHomeVistas">1,001,937 obras de arte y 143,544 artistas</string>
+    <string name="strTituloHome">Fans de la formula 1</string>
+    <string name="strTituloHomeVistas">Aplicacion para fans destacados</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="strArtista">Artista</string>
@@ -20,25 +20,27 @@
     <string name="strEvento1">Evento</string>
     <string name="strGaleria">Galería</string>
     <string name="strNombreArtista">Argentina Vargas</string>
-    <string name="strTituloArte">Las mil y una noche</string>
+    <string name="strDetails">Bahrain Grand Prix</string>
+    <string name="strTituloArte">Pista</string>
     <string name="strMeGusta">Me gusta</string>
-    <string name="strPrecioPintura">1,200.00</string>
-    <string name="strMoneda">$</string>
+    <string name="strPrecioPintura">2004</string>
+    <string name="strMoneda"></string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="strDescripcionArte">Carlos PardoTasies nace en San Josè, Costa Rica en 1952, por azares de la vida ya que su familia radica en Puerto Limòn, provincia del paìs donde se crìa hasta los 6 años. Desde pequeño es impactado por los colores de la provincia habitada en su gran mayorìa por gente de raza negra. Empieza a dibujar desde muy pequeña edad los barcos del muelle y las casuchas del lugar. El impacto del color de las frutas, los amaneceres y las gamas usadas en las casas</string>
+    <string name="strDescripcionArte">Bahrain Grand Prix, conocido oficialmente como Bahrain Grand Prix de Gulf Air por motivos de patrocinio, es un evento de carreras de Fórmula Uno en Bahrein. La primera carrera tuvo lugar en el Circuito Internacional de Bahrein el 4 de abril de 2004</string>
     <string name="strCategoria">Oleo</string>
 
 
-    <string name="strNombreArtistaPerfil">Rodrigo Matus Lazo</string>
-    <string name="strCiudad">Managua, Nicaragua</string>
+    <string name="strNombreArtistaPerfil">Carlos Sainz</string>
+    <string name="strCiudad">Madrid,España</string>
     <string name="strAcercaDeMi">Acerca de mí</string>
-    <string name="strNombreTwitter">\@RafaelLopez</string>
-    <string name="strDescripcionQuienSoy">Nací en la capital de Nicaragua, mi pasión ha sido la pintura en Oleo, siendo mis favoritas las pinturas en oleo. Durante niño me inicié en la pintura de forma nata, luego fui perfeccionando mi técnica en escuelas profesionales. Tengo mas de 10 años de experiencia en pintura.</string>
-    <string name="strCategoriaArtista">Artista plástico</string>
-    <string name="strPaisArtista">Nicaragua</string>
+    <string name="strNombreTwitter">\@Carlossainz55</string>
+    <string name="strDescripcionQuienSoy">Nací en España Madrid, soy corredor para el equipo de Ferrari de formula1, esta pasión fue inspirada en gran parte gracias a mi padre que me enseño sus pasos</string>
+    <string name="strCategoriaArtista">Rancing Driver</string>
+    <string name="strPaisArtista">España</string>
     <string name="strHora1">09:00AM</string>
-    <string name="strEventoCategoria">Pintura en Oleo</string>
+    <string name="strEventoCategoria">Carrera de prueba</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="strMapaUbicacion">Mapa de Ubicación Geográfica</string>
