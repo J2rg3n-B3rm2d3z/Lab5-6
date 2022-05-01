@@ -1,4 +1,4 @@
-package com.laboratorios.lab56.views
+package com.laboratorios.lab56.views.ui
 
 import android.graphics.Color
 import android.os.Bundle

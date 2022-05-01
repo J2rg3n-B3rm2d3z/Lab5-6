@@ -1,4 +1,4 @@
-package com.laboratorios.lab56.views
+package com.laboratorios.lab56.views.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

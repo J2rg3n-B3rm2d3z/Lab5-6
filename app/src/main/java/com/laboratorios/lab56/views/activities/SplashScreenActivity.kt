@@ -1,4 +1,4 @@
-package com.laboratorios.lab56.views
+package com.laboratorios.lab56.views.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent

@@ -1,4 +1,4 @@
-package com.laboratorios.lab56.views
+package com.laboratorios.lab56.views.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

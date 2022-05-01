@@ -1,4 +1,4 @@
-package com.laboratorios.lab56.views
+package com.laboratorios.lab56.views.ui
 
 import adapter_artista
 import android.os.Bundle

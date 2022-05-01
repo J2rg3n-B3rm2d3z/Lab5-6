@@ -1,13 +1,11 @@
-package com.laboratorios.lab56.views
+package com.laboratorios.lab56.views.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
-import com.laboratorios.lab56.R
 import com.laboratorios.lab56.databinding.ActivityLoginBinding
-import java.util.regex.Pattern
 
 class LoginActivity : AppCompatActivity() {
 

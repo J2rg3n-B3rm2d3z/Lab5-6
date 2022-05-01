@@ -10,7 +10,7 @@
 
     <fragment
         android:id="@+id/mfragment_home"
-        android:name="com.laboratorios.lab56.views.HomeFragment"
+        android:name="com.laboratorios.lab56.views.ui.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/mfragment_artist"
-        android:name="com.laboratorios.lab56.views.ArtistFragment"
+        android:name="com.laboratorios.lab56.views.ui.ArtistFragment"
         android:label="fragment_artist"
         tools:layout="@layout/fragment_artist" >
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/mfragment_gallery"
-        android:name="com.laboratorios.lab56.views.GalleryFragment"
+        android:name="com.laboratorios.lab56.views.ui.GalleryFragment"
         android:label="fragment_gallery"
         tools:layout="@layout/fragment_gallery" >
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/mfragment_event"
-        android:name="com.laboratorios.lab56.views.EventFragment"
+        android:name="com.laboratorios.lab56.views.ui.EventFragment"
         android:label="fragment_event"
         tools:layout="@layout/fragment_event" >
         <action
@@ -52,17 +52,17 @@
     </fragment>
     <fragment
         android:id="@+id/mgalleryDetailsFragment"
-        android:name="com.laboratorios.lab56.views.GalleryDetailsFragment"
+        android:name="com.laboratorios.lab56.views.ui.GalleryDetailsFragment"
         android:label="fragment_gallery_details"
         tools:layout="@layout/fragment_gallery_details" />
     <fragment
         android:id="@+id/martistDetailsFragment"
-        android:name="com.laboratorios.lab56.views.ArtistDetailsFragment"
+        android:name="com.laboratorios.lab56.views.ui.ArtistDetailsFragment"
         android:label="fragment_artist_details"
         tools:layout="@layout/fragment_artist_details" />
     <fragment
         android:id="@+id/meventUbicationFragment"
-        android:name="com.laboratorios.lab56.views.EventUbicationFragment"
+        android:name="com.laboratorios.lab56.views.ui.EventUbicationFragment"
         android:label="fragment_event_ubication"
         tools:layout="@layout/fragment_event_ubication" />
 </navigation>
