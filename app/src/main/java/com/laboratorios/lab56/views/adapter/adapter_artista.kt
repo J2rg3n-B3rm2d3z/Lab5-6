@@ -1,3 +1,4 @@
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -6,30 +7,26 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.laboratorios.lab56.R
 import com.laboratorios.lab56.model.artista
+import com.laboratorios.lab56.model.evento
+import com.laboratorios.lab56.model.pintura
 import com.laboratorios.lab56.views.adapter.artista_listener
 
-class adapter_artista(private val ArtistaListener: artista_listener, Artista: MutableList<artista>,
-                      resource: Int, context: Context?) :
+class adapter_artista(private val ArtistaListener: artista_listener) :
     RecyclerView.Adapter<adapter_artista.ArtistaViewHolder>() {
 
     //Values to use
-
-    private val artista: MutableList<artista> = Artista
-    private val resource:Int = resource
-    private val context: Context? = context
+    var listArtista= ArrayList<artista>()
 
     //Get items to the list
 
-    override fun onCreateViewHolder(parent: ViewGroup, ViewType: Int): ArtistaViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(resource, parent, false)
-        return ArtistaViewHolder(view)
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, ViewType: Int)=
+        ArtistaViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_artista,parent,false))
 
     //return the view in the fragment
 
     override fun onBindViewHolder(holder: ArtistaViewHolder, position: Int) {
         //
-        val Artista: artista = artista[position]
+        val Artista: artista = listArtista[position]
         holder.artistaNombre.text = Artista.ArtistaNombre
         holder.artistaCategoria.text =Artista.ArtistaCategoria
         holder.artistaPais.text = Artista.ArtistaPais
@@ -39,9 +36,18 @@ class adapter_artista(private val ArtistaListener: artista_listener, Artista: Mu
         }
     }
 
+    //Para que se valla actualizando
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun updateData(data:List<artista>){
+        listArtista.clear()
+        listArtista.addAll(data)
+        notifyDataSetChanged()
+    }
+
 
     override fun getItemCount(): Int {
-        return artista.size
+        return listArtista.size
     }
 
     //Assign de item property in the holder

@@ -6,17 +6,28 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.laboratorios.lab56.R
 import com.laboratorios.lab56.databinding.FragmentArtistBinding
 import com.laboratorios.lab56.model.artista
+import com.laboratorios.lab56.model.pintura
+import com.laboratorios.lab56.viewmodel.artistaViewModel
+import com.laboratorios.lab56.viewmodel.pinturaViewModel
+import com.laboratorios.lab56.views.adapter.adapter_galeria
 import com.laboratorios.lab56.views.adapter.artista_listener
 
 class ArtistFragment : Fragment() , artista_listener {
 
     private var fbinding: FragmentArtistBinding? = null
     private val binding get() = fbinding!!
+
+    //---
+    private lateinit var artistaAdapter: adapter_artista
+    private lateinit var viewModel: artistaViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,43 +38,43 @@ class ArtistFragment : Fragment() , artista_listener {
 
         //setup recycler view
 
-        val reciclerartista = binding.rvArtista
-        val linearmanager = LinearLayoutManager(context)
-        linearmanager.orientation = LinearLayoutManager.VERTICAL
-        reciclerartista.layoutManager = linearmanager
+        viewModel = ViewModelProviders.of(this)[artistaViewModel::class.java]
+        viewModel.refresh()
+        artistaAdapter = adapter_artista(this)
 
-        //Start recycler view
+        binding.rvArtista.apply {
+            layoutManager = LinearLayoutManager(view.context,LinearLayoutManager.VERTICAL,false)
+            adapter = artistaAdapter
 
-        val adapter = adapter_artista(this, GetArtista(), R.layout.item_artista, context)
-        reciclerartista.adapter = adapter
+        }
+        observeViewModel()
+
+
         return view
+    }
+
+    private fun observeViewModel() {
+        viewModel.listArtista.observe(viewLifecycleOwner, Observer<List<artista>>{ artista ->
+            artistaAdapter.updateData(artista)
+        })
+
+        viewModel.isLoading.observe(viewLifecycleOwner, Observer{
+            if(it!=null){
+                binding.progressgaleria.visibility = View.INVISIBLE
+            }
+        })
     }
 
     //Get the fragment in the Listener
 
     override fun onArtistaClicked(Artista: artista, position: Int) {
-        NavHostFragment.findNavController(this).navigate(R.id.martistDetailsFragment)
+        val bundle = bundleOf("artista" to Artista)
+        NavHostFragment.findNavController(this).navigate(R.id.martistDetailsFragment,bundle)
     }
 
-    //Cargar obras de arte
-
-    private fun GetArtista(): MutableList<artista>{
-        val artistaList: MutableList<artista> = ArrayList()
-        artistaList.add(artista("George Russell","Mercedes","España"))
-        artistaList.add(artista("Lewis Hamilton","Mercedes", "España"))
-        artistaList.add(artista("Fernando Alonso", "Alpine", "España"))
-        artistaList.add(artista("Esteban Ocon", "Alpine", "España"))
-        artistaList.add(artista("Kevin Magnussen", "Haas", "Alemania"))
-        artistaList.add(artista("Mick Schumacher","Haas","Nueva Zelanda"))
-        artistaList.add(artista("Daniel Ricciardo","Mclaren", "Australia"))
-        artistaList.add(artista("Lando Norris", "Mclaren", "Australia"))
-        artistaList.add(artista("Valtteri Bottas", "Alfa Romeo", "Finlandia"))
-        artistaList.add(artista("Guanyu Zhou", "Alfa Romeo", "Finlandia"))
-        artistaList.add(artista("Sergio Pérez","Red Bull","Nueva Zelanda"))
-        artistaList.add(artista("Max Verstapen","Red Bull", "China"))
-        artistaList.add(artista("Charles Leclerc", "Ferrari", "Francia"))
-        artistaList.add(artista("Carlos Sainz", "Ferrari", "España"))
-        artistaList.add(artista("Pierre Gasly", "Alphatauri", "Francia"))
-        return artistaList
+    override fun onDestroyView() {
+        super.onDestroyView()
+        fbinding = null
     }
+
 }

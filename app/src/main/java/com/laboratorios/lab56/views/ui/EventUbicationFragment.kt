@@ -28,6 +28,11 @@ class EventUbicationFragment : DialogFragment() {
         return view
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        fbinding = null
+    }
+
     //Setup thee toolbar
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

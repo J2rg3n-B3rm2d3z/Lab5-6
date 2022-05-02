@@ -1,4 +1,5 @@
 package com.laboratorios.lab56.views.adapter
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -6,23 +7,18 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.api.ResourceProto.resource
 import com.laboratorios.lab56.R
 import com.laboratorios.lab56.model.pintura
 import com.squareup.picasso.Picasso
 
 //Class to adapt in recycler view
 
-class adapter_galeria(private val GaleriaListener:galeriaListener,
-                      private val Galeria: MutableList<pintura>,
-                      private val Resource:Int,
-                      private val Context:Context?):
+class adapter_galeria(val GaleriaListener: galeriaListener):
     RecyclerView.Adapter<adapter_galeria.ViewHolder>() {
 
     //Values to use
-
-    private val galeria:MutableList<pintura> = Galeria
-    private val resource:Int = Resource
-    private val context:Context? = Context
+    var listGaleria = ArrayList<pintura>()
 
     //Get items to the list
 
@@ -34,20 +30,23 @@ class adapter_galeria(private val GaleriaListener:galeriaListener,
         val precioPintura:TextView = itemview.findViewById<View>(R.id.tvPrecioPintura) as TextView
     }
 
-    //return the view in the fragment
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-
-        val view = LayoutInflater.from(parent.context).inflate(resource,parent,false)
-        return ViewHolder(view)
-
+    @SuppressLint("NotifyDataSetChanged")
+    fun updateData(data:List<pintura>){
+        listGaleria.clear()
+        listGaleria.addAll(data)
+        notifyDataSetChanged()
     }
 
-    //Assign de item property in the holder
 
+    //return the view in the fragment
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        ViewHolder( LayoutInflater.from(parent.context).inflate(R.layout.item_galeria,parent,false))
+
+    //Assign de item property in the holder
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        val Pintura:pintura = galeria[position]
+        val Pintura:pintura = listGaleria[position]
         holder.artistaPintura.text = Pintura.ArtistaPintura
         holder.titulopintura.text = Pintura.TituloPintura
         holder.precioPintura.text = Pintura.PrecioPintura
@@ -58,6 +57,6 @@ class adapter_galeria(private val GaleriaListener:galeriaListener,
 
     }
 
-    override fun getItemCount() = galeria.size
+    override fun getItemCount() = listGaleria.size
 
 }

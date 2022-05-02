@@ -10,10 +10,14 @@ import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.DialogFragment
 import androidx.navigation.Navigation
 import com.laboratorios.lab56.databinding.FragmentGalleryDetailsBinding
+import com.laboratorios.lab56.model.pintura
+import com.squareup.picasso.Picasso
 
 class GalleryDetailsFragment : DialogFragment() {
 
     //Binding View
+
+    var Titulo:String = ""
 
     private var _binding: FragmentGalleryDetailsBinding? = null
     private val binding get() = _binding!!
@@ -23,7 +27,16 @@ class GalleryDetailsFragment : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentGalleryDetailsBinding.inflate(inflater, container, false)
-        return binding.root
+        val view = binding.root
+
+        val galeria = arguments?.getSerializable("galerias") as pintura
+
+        binding.tvArtistaDetalle.text = galeria.ArtistaPintura
+        Titulo = galeria.TituloPintura +" - ( " + galeria.PrecioPintura + " )"
+        binding.txtDetalleArte.text = galeria.DetallePintura
+        Picasso.get().load(galeria.UrlPintura).into(binding.imgDetalleArte)
+
+        return view
     }
 
     //Override the Ondestroy
@@ -40,7 +53,7 @@ class GalleryDetailsFragment : DialogFragment() {
         val toolbar: Toolbar = binding.tooldetallegaleria
 
         (activity as AppCompatActivity).setSupportActionBar(toolbar)
-        toolbar.title = "Pista"
+        toolbar.title = Titulo
         toolbar.setTitleTextColor(Color.WHITE)
         toolbar.setNavigationOnClickListener {
             dismiss()
@@ -54,6 +67,7 @@ class GalleryDetailsFragment : DialogFragment() {
         super.onStart()
         dialog?.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT)
     }
+
 
 
 }

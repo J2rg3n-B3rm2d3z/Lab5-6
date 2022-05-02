@@ -5,22 +5,26 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.compose.NavHost
+import androidx.core.os.bundleOf
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.laboratorios.lab56.R
 import com.laboratorios.lab56.databinding.FragmentGalleryBinding
-import com.laboratorios.lab56.databinding.FragmentGalleryDetailsBinding
 import com.laboratorios.lab56.model.pintura
+import com.laboratorios.lab56.viewmodel.pinturaViewModel
 import com.laboratorios.lab56.views.adapter.adapter_galeria
 import com.laboratorios.lab56.views.adapter.galeriaListener
-
 
 class GalleryFragment : Fragment(), galeriaListener {
 
     private var _binding: FragmentGalleryBinding? = null
     private val binding get() = _binding!!
+
+    //----
+    private lateinit var galeriaAdapter: adapter_galeria
+    private lateinit var viewModel:pinturaViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,17 +36,31 @@ class GalleryFragment : Fragment(), galeriaListener {
 
         val view = binding.root
 
-        //Setup the recycler view
+        viewModel = ViewModelProviders.of(this)[pinturaViewModel::class.java]
+        viewModel.refresh()
+        galeriaAdapter = adapter_galeria(this)
 
-        val reciclergaleria = view.findViewById<View>(R.id.rvgaleria) as RecyclerView
-        val linearmanager = LinearLayoutManager(context)
-        linearmanager.orientation = LinearLayoutManager.VERTICAL
-        reciclergaleria.layoutManager = linearmanager
+        binding.rvgaleria.apply {
+            layoutManager = LinearLayoutManager(view.context,LinearLayoutManager.VERTICAL,false)
+            adapter = galeriaAdapter
 
-        val adapter = adapter_galeria(this,getGaleria(), R.layout.item_galeria, context)
-        reciclergaleria.adapter = adapter
+        }
+        observeViewModel()
+
 
         return view
+    }
+
+    private fun observeViewModel() {
+        viewModel.listPinturas.observe(viewLifecycleOwner, Observer<List<pintura>>{ galeria ->
+            galeriaAdapter.updateData(galeria)
+        })
+
+        viewModel.isLoading.observe(viewLifecycleOwner, Observer{
+            if(it!=null){
+                binding.progressgaleria.visibility = View.INVISIBLE
+            }
+        })
     }
 
     //Override the Ondestroy
@@ -57,22 +75,7 @@ class GalleryFragment : Fragment(), galeriaListener {
     @Override
     override fun onGaleriaClicked(Galeria: pintura, position: Int) {
         super.onGaleriaClicked(Galeria, position)
-        NavHostFragment.findNavController(this).navigate(R.id.mgalleryDetailsFragment)
+        val bundle = bundleOf("galerias" to Galeria)
+        NavHostFragment.findNavController(this).navigate(R.id.mgalleryDetailsFragment,bundle)
     }
-
-    //Get the List to use in the recycler view
-
-    private fun getGaleria(): MutableList<pintura>{
-        // we have to create a list with drivers of f1
-        val galeriaList: MutableList<pintura> = ArrayList()
-        galeriaList.add(pintura("Autódromu","1997-2003","https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Red_Bull_Ring%2C_April_18%2C_2018_SkySat.jpg/1280px-Red_Bull_Ring%2C_April_18%2C_2018_SkySat.jpg","Red Bull Ring"))
-        galeriaList.add(pintura("Hibirido","2004-2010", "https://upload.wikimedia.org/wikipedia/commons/1/10/2012_Bahrain_Grand_Prix_2.jpg", "Bahrain Grand Prix"))
-        galeriaList.add(pintura("Autódromu", "1999", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/F1_Circuit_de_Catalunya_-_Tribuna.jpg/1024px-F1_Circuit_de_Catalunya_-_Tribuna.jpg", "Circuito de Catalunya"))
-        galeriaList.add(pintura("Autódromu", "2009", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Autodromo_aerea_poster.jpg/1024px-Autodromo_aerea_poster.jpg", "Autodromo Aerea"))
-        return galeriaList
-    }
-
-
-
-
 }

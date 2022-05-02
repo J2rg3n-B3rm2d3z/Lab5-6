@@ -13,6 +13,8 @@ import androidx.fragment.app.DialogFragment
 import androidx.navigation.Navigation
 import com.laboratorios.lab56.R
 import com.laboratorios.lab56.databinding.FragmentArtistDetailsBinding
+import com.laboratorios.lab56.model.artista
+import com.laboratorios.lab56.model.pintura
 
 class ArtistDetailsFragment : DialogFragment() {
 
@@ -28,6 +30,13 @@ class ArtistDetailsFragment : DialogFragment() {
 
         fbinding = FragmentArtistDetailsBinding.inflate(layoutInflater)
         val view = binding.root
+
+        val Artista =  arguments?.getSerializable("artista") as artista
+
+        binding.tvNombrePerfil.text = Artista.ArtistaNombre
+        binding.tvCiudadPerfil.text = Artista.ArtistaPais
+        binding.tvDescripcionAcerca.text = Artista.ArtistaDetalle
+
 
         //Code to use the button to open n close
 
@@ -65,6 +74,11 @@ class ArtistDetailsFragment : DialogFragment() {
             Navigation.findNavController(it).navigateUp()
         }
 
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        fbinding = null
     }
 
     //Fullscreen dialog
