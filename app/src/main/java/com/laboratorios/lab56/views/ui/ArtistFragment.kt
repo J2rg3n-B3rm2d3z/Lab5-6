@@ -45,13 +45,14 @@ class ArtistFragment : Fragment() , artista_listener {
         binding.rvArtista.apply {
             layoutManager = LinearLayoutManager(view.context,LinearLayoutManager.VERTICAL,false)
             adapter = artistaAdapter
-
         }
         observeViewModel()
 
 
         return view
     }
+
+    //funcion para cargar datos obtenidos del BBDD y mostrarlos en pantalla
 
     private fun observeViewModel() {
         viewModel.listArtista.observe(viewLifecycleOwner, Observer<List<artista>>{ artista ->
@@ -68,7 +69,7 @@ class ArtistFragment : Fragment() , artista_listener {
     //Get the fragment in the Listener
 
     override fun onArtistaClicked(Artista: artista, position: Int) {
-        val bundle = bundleOf("artista" to Artista)
+        val bundle = bundleOf("artista" to Artista)//Se le pasa el objeto al siguiente fragment
         NavHostFragment.findNavController(this).navigate(R.id.martistDetailsFragment,bundle)
     }
 

@@ -40,7 +40,8 @@ class UbicationDetFragment : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //---------------------
+
+        //Configurar el toolbar
         val toolbar: Toolbar = view.findViewById(R.id.toolubicaciondetalle)
         (activity as AppCompatActivity).setSupportActionBar(toolbar)
         toolbar.navigationIcon= ContextCompat.getDrawable(view.context, R.drawable.ic_close)
@@ -50,6 +51,8 @@ class UbicationDetFragment : DialogFragment() {
             dismiss()
             Navigation.findNavController(it).navigateUp()
         }
+
+        //Se obtiene el objeto que se paso en el fragment anterior y se usa
 
         Evento = arguments?.getSerializable("evento") as evento
 
@@ -64,6 +67,9 @@ class UbicationDetFragment : DialogFragment() {
         txtWebSiteEvento.text = Evento.WebSite
         Picasso.get().load(Evento.Photo).into(binding.imgubicacion)
 
+        //Al dar click al numero de telefono o a la pagina web
+        //Te llevaran a la aplicacion de telefono o a chrome
+
         txtWebSiteEvento.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(txtWebSiteEvento.text as String)
@@ -77,10 +83,14 @@ class UbicationDetFragment : DialogFragment() {
         }
     }
 
+    //Maximizar el fragment
+
     override fun onStart() {
         super.onStart()
         dialog?.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
     }
+
+    //Personalizar el fragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -344,10 +344,8 @@ class MenuActivity : AppCompatActivity() {
     private fun configurarNavegacion()
     {
         //Navigation controller
-
         val menuArtList:BottomNavigationView = binding.bottomNavMenu
         setupWithNavController(menuArtList, findNavController(this,R.id.frag_navgraph))
-
 
     }
 

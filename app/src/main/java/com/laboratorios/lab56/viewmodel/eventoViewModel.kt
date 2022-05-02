@@ -12,9 +12,13 @@ class eventoViewModel: ViewModel() {
     val listEventos : MutableLiveData<List<evento>> = MutableLiveData()
     val isLoading = MutableLiveData<Boolean>()
 
+    //Refrescar
+
     fun refresh(){
         getScheduleFromFirebase()
     }
+
+    //Obtener los datos
 
     private fun getScheduleFromFirebase() {
         firestoreService.getEventos(object: Callback<List<evento>> {
@@ -28,6 +32,8 @@ class eventoViewModel: ViewModel() {
             }
         })
     }
+
+    //Finish process
 
     fun processFinished (){
         isLoading.value = true

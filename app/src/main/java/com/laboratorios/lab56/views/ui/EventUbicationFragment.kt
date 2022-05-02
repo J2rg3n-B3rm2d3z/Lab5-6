@@ -66,6 +66,8 @@ class EventUbicationFragment : DialogFragment(), OnMapReadyCallback,
             Navigation.findNavController(it).navigateUp()
         }
 
+        //Addd google maps
+
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
@@ -79,10 +81,14 @@ class EventUbicationFragment : DialogFragment(), OnMapReadyCallback,
         dialog?.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT)
     }
 
+    //Uso de googlo maps
+
     override fun onMapReady(googleMap: GoogleMap) {
         //Declaracion de variables
         val zoom=16f
         val centerMap = LatLng(Evento.Latitud, Evento.Longitud)
+
+        //Configurarlo
 
         googleMap?.animateCamera(CameraUpdateFactory.newLatLngZoom(centerMap,zoom))
         val centerMark= LatLng(Evento.Latitud, Evento.Longitud)
@@ -100,10 +106,11 @@ class EventUbicationFragment : DialogFragment(), OnMapReadyCallback,
         googleMap?.setMapStyle(MapStyleOptions.loadRawResourceStyle(requireContext(), R.raw.map_style))
     }
 
+    //Se va al siguiente fragment si le da click en el marcador
 
     override fun onMarkerClick(googleMap: Marker): Boolean {
 
-        val bundle = bundleOf("evento" to Evento)
+        val bundle = bundleOf("evento" to Evento)//Se le pasa el objeto al siguiente fragment
         findNavController(this).navigate(R.id.mubicationDetFragment, bundle)
         return true
 

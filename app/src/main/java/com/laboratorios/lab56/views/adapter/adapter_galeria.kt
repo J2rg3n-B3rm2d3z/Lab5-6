@@ -32,6 +32,8 @@ class adapter_galeria(val GaleriaListener: galeriaListener):
         val precioPintura:TextView = itemview.findViewById<View>(R.id.tvPrecioPintura) as TextView
     }
 
+    //Para que se valla actualizando
+
     @SuppressLint("NotifyDataSetChanged")
     fun updateData(data:List<pintura>){
         listGaleria.clear()

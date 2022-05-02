@@ -11,9 +11,13 @@ class artistaViewModel: ViewModel() {
     val listArtista : MutableLiveData<List<artista>> = MutableLiveData()
     val isLoading = MutableLiveData<Boolean>()
 
+    //Refrescar
+
     fun refresh(){
         getScheduleFromFirebase()
     }
+
+    //Obtener los datos
 
     private fun getScheduleFromFirebase() {
         firestoreService.getArtistas(object: Callback<List<artista>>{
@@ -27,6 +31,8 @@ class artistaViewModel: ViewModel() {
             }
         })
     }
+
+    //Finish process
 
     fun processFinished (){
         isLoading.value = true

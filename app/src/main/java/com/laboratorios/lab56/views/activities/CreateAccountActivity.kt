@@ -33,6 +33,8 @@ class CreateAccountActivity : AppCompatActivity() {
         passswordFocusListener()
         passwordConfirmFocusListener()
 
+        //En caso que le de click al boton
+
         binding.btnCrearCuenta.setOnClickListener {
 
             val userText = binding.tvEmailCuenta.text.toString()
@@ -53,6 +55,8 @@ class CreateAccountActivity : AppCompatActivity() {
 
     }
 
+    //Si el campo esta enfocado
+
     private fun emailFocusListener() {
         binding.tvEmailCuenta.setOnFocusChangeListener { _, focused ->
             if(!focused)
@@ -71,7 +75,7 @@ class CreateAccountActivity : AppCompatActivity() {
             null
     }
 
-
+    //Si el campo de la paswword esta enfocado
 
     private fun passswordFocusListener() {
         binding.tvPasswordCuenta.setOnFocusChangeListener { _, focused ->
@@ -98,6 +102,7 @@ class CreateAccountActivity : AppCompatActivity() {
             null
     }
 
+    //Si el campo de la paswword de confirmacion esta enfocado
 
     private fun passwordConfirmFocusListener() {
         binding.tvConfirmarPassword.setOnFocusChangeListener { _, focused ->

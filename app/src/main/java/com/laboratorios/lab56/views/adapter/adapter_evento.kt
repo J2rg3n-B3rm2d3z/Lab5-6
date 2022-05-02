@@ -55,6 +55,8 @@ class adapter_evento (val EventoListener: eventoListener) :
         }
     }
 
+    //Para que se valla actualizando
+
     @SuppressLint("NotifyDataSetChanged")
     fun updateData(data:List<evento>){
         listEvento.clear()

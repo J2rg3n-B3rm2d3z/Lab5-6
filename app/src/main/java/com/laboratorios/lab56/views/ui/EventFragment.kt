@@ -53,6 +53,8 @@ class EventFragment : Fragment(), eventoListener {
         return view
     }
 
+    //funcion para cargar datos obtenidos del BBDD y mostrarlos en pantalla
+
     private fun observeViewModel() {
         viewModel.listEventos.observe(viewLifecycleOwner, Observer<List<evento>>{ evento ->
             eventoAdapter.updateData(evento)
@@ -73,7 +75,7 @@ class EventFragment : Fragment(), eventoListener {
     //Get the fragment in the Listener
 
     override fun onEventoClicked(Evento: evento, position: Int) {
-        val bundle = bundleOf("evento" to Evento)
+        val bundle = bundleOf("evento" to Evento)//Se le pasa el objeto al siguiente fragment
         NavHostFragment.findNavController(this).navigate(R.id.meventUbicationFragment,bundle)
     }
 

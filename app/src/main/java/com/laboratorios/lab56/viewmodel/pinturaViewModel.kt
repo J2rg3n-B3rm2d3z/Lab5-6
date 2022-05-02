@@ -11,9 +11,13 @@ class pinturaViewModel:ViewModel() {
     val listPinturas : MutableLiveData<List<pintura>> = MutableLiveData()
     val isLoading = MutableLiveData<Boolean>()
 
+    //Refrescar
+
     fun refresh(){
         getScheduleFromFirebase()
     }
+
+    //Obtener los datos
 
     private fun getScheduleFromFirebase() {
         firestoreService.getgaleria(object: Callback<List<pintura>> {
@@ -27,6 +31,8 @@ class pinturaViewModel:ViewModel() {
             }
         })
     }
+
+    //Finish process
 
     fun processFinished (){
         isLoading.value = true

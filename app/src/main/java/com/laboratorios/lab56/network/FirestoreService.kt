@@ -22,6 +22,8 @@ class FirestoreService  {
 
     //El Callback corresponde a la interfaz creada por nosotros mismos
 
+    //Obtener la coleccion artista
+
     fun getArtistas(callback: Callback <List<artista>>) {
         firebaseFirestore.collection(ARTISTAS_COLLECTION_NAME)
             .orderBy("artistaNombre")
@@ -35,6 +37,8 @@ class FirestoreService  {
             }
     }
 
+    //Obtener la coleccion eventos
+
     fun getEventos(callback:Callback <List<evento>>) {
         firebaseFirestore.collection(EVENTOS_COLLECTION_NAME)
             .get()
@@ -46,6 +50,8 @@ class FirestoreService  {
                 }
             }
     }
+
+    //Obtener la coleccion galeria
 
     fun getgaleria(callback:Callback <List<pintura>>) {
         firebaseFirestore.collection(GALERIA_COLLECTION_NAME)

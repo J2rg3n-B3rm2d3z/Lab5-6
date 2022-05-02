@@ -19,6 +19,10 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        //Verificar si los campos estan enfocados
+        //y no tiene errores
+
         emailFocusListener()
         passswordFocusListener()
 

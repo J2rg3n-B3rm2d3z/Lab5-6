@@ -32,6 +32,9 @@ class ArtistDetailsFragment : DialogFragment() {
         fbinding = FragmentArtistDetailsBinding.inflate(layoutInflater)
         val view = binding.root
 
+        //Obtiene el objeto que se paso en el fragment anterior y se usa para
+        //Asignarlo en el binding para mostrarlo en pantalla
+
         val Artista =  arguments?.getSerializable("artista") as artista
 
         binding.tvNombrePerfil.text = Artista.ArtistaNombre

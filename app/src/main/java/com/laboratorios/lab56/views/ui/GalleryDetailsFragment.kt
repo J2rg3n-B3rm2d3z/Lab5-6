@@ -29,6 +29,8 @@ class GalleryDetailsFragment : DialogFragment() {
         _binding = FragmentGalleryDetailsBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        //Se obtiene el objeto que se paso en el fragment anterior u se usa
+
         val galeria = arguments?.getSerializable("galerias") as pintura
 
         binding.tvArtistaDetalle.text = galeria.ArtistaPintura

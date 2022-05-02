@@ -36,6 +36,8 @@ class GalleryFragment : Fragment(), galeriaListener {
 
         val view = binding.root
 
+        //setup recycler view
+
         viewModel = ViewModelProviders.of(this)[pinturaViewModel::class.java]
         viewModel.refresh()
         galeriaAdapter = adapter_galeria(this)
@@ -50,6 +52,8 @@ class GalleryFragment : Fragment(), galeriaListener {
 
         return view
     }
+
+    //funcion para cargar datos obtenidos del BBDD y mostrarlos en pantalla
 
     private fun observeViewModel() {
         viewModel.listPinturas.observe(viewLifecycleOwner, Observer<List<pintura>>{ galeria ->
@@ -74,8 +78,7 @@ class GalleryFragment : Fragment(), galeriaListener {
 
     @Override
     override fun onGaleriaClicked(Galeria: pintura, position: Int) {
-        super.onGaleriaClicked(Galeria, position)
-        val bundle = bundleOf("galerias" to Galeria)
+        val bundle = bundleOf("galerias" to Galeria)//Se le pasa el objeto al siguiente fragment
         NavHostFragment.findNavController(this).navigate(R.id.mgalleryDetailsFragment,bundle)
     }
 }
