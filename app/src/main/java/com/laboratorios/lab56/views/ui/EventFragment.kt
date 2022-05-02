@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -72,7 +73,8 @@ class EventFragment : Fragment(), eventoListener {
     //Get the fragment in the Listener
 
     override fun onEventoClicked(Evento: evento, position: Int) {
-        NavHostFragment.findNavController(this).navigate(R.id.meventUbicationFragment)
+        val bundle = bundleOf("evento" to Evento)
+        NavHostFragment.findNavController(this).navigate(R.id.meventUbicationFragment,bundle)
     }
 
 }

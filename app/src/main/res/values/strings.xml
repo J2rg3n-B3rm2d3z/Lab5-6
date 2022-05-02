@@ -46,5 +46,7 @@
     <string name="strMapaUbicacion">Mapa de Ubicación Geográfica</string>
     <string name="hello_blank_fragment">Hola a todos</string>
     <string name="Requerido">Requerido</string>
+    <string name="strDeterminado">Texto predeterminado</string>
+
 </resources>
 

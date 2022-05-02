@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.laboratorios.lab56.R
@@ -23,14 +25,33 @@ class adapter_evento (val EventoListener: eventoListener) :
 
     //return the view in the fragment
 
-    override fun onBindViewHolder(holder: adapter_evento.EventoViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: adapter_evento.EventoViewHolder, @SuppressLint("RecyclerView") position: Int) {
         val Evento: evento = listEvento[position]
         holder.Hora.text = Evento.Hora
         holder.Evento.text = Evento.Evento
         holder.Categoria.text = Evento.Categoria
 
         holder.itemView.setOnClickListener { view ->
-            EventoListener.onEventoClicked( Evento, position)
+            val animationItem = AnimationUtils.loadAnimation(view.context, R.anim.itemevent_animation)
+            view.startAnimation(animationItem)
+
+            animationItem.setAnimationListener(object: Animation.AnimationListener{
+                override fun onAnimationStart(animation: Animation?) {
+
+                }
+
+                override fun onAnimationEnd(animation: Animation?) {
+                    EventoListener.onEventoClicked(Evento, position)
+                }
+
+                override fun onAnimationRepeat(animation: Animation?) {
+
+                }
+
+
+            })
+
+
         }
     }
 

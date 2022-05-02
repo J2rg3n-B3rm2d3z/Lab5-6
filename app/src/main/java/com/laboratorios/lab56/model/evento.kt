@@ -6,8 +6,15 @@ import java.io.Serializable
 
 //Se serializo para el uso de bases de datos
 
-class evento: Serializable{
-    var Hora:String = ""
-    var Evento:String = ""
-    var Categoria:String = ""
+class evento:Serializable {
+    var Hora: String = ""
+    var Evento: String = ""
+    var Lugar: String = ""
+    var Categoria: String = ""
+    var Direccion: String = ""
+    var Latitud: Double = 0.00
+    var Longitud: Double = 0.00
+    var Telefono: String = ""
+    var WebSite: String = ""
+    var Photo: String = ""
 }

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:fitsSystemWindows="true"
+    tools:context=".views.ui.UbicationDetFragment">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/NoActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolubicaciondetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margentop1">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDatosUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/alto4"
+            android:layout_gravity="center"
+            app:cardCornerRadius="@dimen/margen1"
+            app:cardElevation="@dimen/margen"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/imgubicacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/img_bienvenida"
+                    app:layout_behavior="@id/toolubicaciondetalle"
+                    android:contentDescription="@string/strDetails">
+                </ImageView>
+                <TextView
+                    android:id="@+id/txtLugarEvento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/strDeterminado"
+                    android:textColor="@color/rosa"
+                    android:textSize="@dimen/tamtexto1" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDireccionEvento"
+                    android:drawableLeft="@drawable/ic_location"
+                    android:gravity="center|left"
+                    android:maxLines="2"
+                    android:text="@string/strDeterminado"
+                    android:layout_marginTop="@dimen/margentop1"
+                    android:paddingLeft="@dimen/margenizq">
+                </com.google.android.material.textview.MaterialTextView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/alto5"
+                    android:background="@color/colorbackgroundcard">
+                </View>
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/alto4"
+                    android:id="@+id/txtSitioWebEvento"
+                    android:drawableLeft="@drawable/ic_website"
+                    android:gravity="center|left"
+                    android:text="@string/strDeterminado"
+                    android:paddingLeft="@dimen/margenizq"
+                    android:layout_marginTop="@dimen/margen">
+                </com.google.android.material.textview.MaterialTextView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/alto5"
+                    android:background="@color/colorbackgroundcard">
+                </View>
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/alto4"
+                    android:id="@+id/txtTelefonoEvento"
+                    android:drawableLeft="@drawable/ic_phone"
+                    android:gravity="center|left"
+                    android:text="@string/strDeterminado"
+                    android:paddingLeft="@dimen/margenizq"
+                    android:layout_marginTop="@dimen/margen"
+                    android:layout_marginBottom="@dimen/margen">
+                </com.google.android.material.textview.MaterialTextView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

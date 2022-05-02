@@ -34,66 +34,157 @@ class MenuActivity : AppCompatActivity() {
         val jsonArrEvento = JSONArray("[\n" +
                 "            {\n" +
                 "                'hora' : '00:37',\n" +
+                "                'lugar' : 'Universidad Nacional de Ingeniería (UNI)',\n" +
+                "                'direccion' : 'Managua, Nicaragua',\n" +
+                "                'latitud' : 12.132217502029128,\n" +
+                "                'longitud' : -86.26987020617783,\n" +
+                "                'telefono' : '22700973',\n" +
+                "                'webSite' : 'https://www.uni.edu.ni',\n" +
+                "                'photo' : 'https://lh5.googleusercontent.com/p/AF1QipPBc_8YcZrVDAYJQVNxsFShaUBt1fMXaP524MSk=w408-h306-k-no',\n" +
                 "                'evento' : 'GP de Bahrein',\n" +
                 "                'categoria' : 'Carrera'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'hora' : '03:49',\n" +
+                "                'lugar' : 'Palacio Nacional Nicaragua',\n" +
+                "                'direccion' : 'Managua,Nicaragua',\n" +
+                "                'latitud' : 12.155753468843768,\n" +
+                "                'longitud' : -86.27181158240545,\n" +
+                "                'telefono' : '22700973',\n" +
+                "                'webSite' : 'https://www.uni.edu.ni',\n" +
+                "                'photo' : 'https://lh5.googleusercontent.com/p/AF1QipPSqNF77DzZ4u7OR7td8djndBhv2oZIBqpZ98Sr=w408-h306-k-no',\n" +
                 "                'evento' : 'GP de Arabia Saudi',\n" +
                 "                'categoria' : 'Carrera'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'hora' : '06:52',\n" +
+                "                'lugar' : 'Catedral de León',\n" +
+                "                'direccion' : 'León, Nicaragua',\n" +
+                "                'latitud' : 12.435324873993144,\n" +
+                "                'longitud' : -86.87811227445178,\n" +
+                "                'telefono' : '22700973',\n" +
+                "                'webSite' : 'https://www.uni.edu.ni',\n" +
+                "                'photo' : 'https://lh5.googleusercontent.com/p/AF1QipNs-Imj8nYgJGnGzSX3RBTyF0Wb8JUgrDEPzRAZ=w408-h306-k-no',\n" +
                 "                'evento' : 'GP de Australia',\n" +
                 "                'categoria' : 'Carrera'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'hora' : '07:52.',\n" +
+                "                'lugar' : 'Centro Cultural Mercado de Artesanías',\n" +
+                "                'direccion' : 'Masaya, Nicaragua',\n" +
+                "                'latitud' : 11.974114551016928,\n" +
+                "                'longitud' : -86.09356818480153,\n" +
+                "                'telefono' : '22700973',\n" +
+                "                'webSite' : 'https://www.uni.edu.ni',\n" +
+                "                'photo' : 'https://nuevaya.com.ni/wp-content/uploads/2021/02/UNI-RECIENTO-FRENTE-ACTUAL.jpg.webp',\n" +
                 "                'evento' : 'GP de Romaña',\n" +
                 "                'categoria' : 'Carrera'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'hora' : '09:35',\n" +
+                "                'lugar' : 'Galerías Santo Domingo',\n" +
+                "                'direccion' : 'Managua, Nicaragua',\n" +
+                "                'latitud' : 12.103822159374769,\n" +
+                "                'longitud' : -86.24928744561913,\n" +
+                "                'telefono' : '22700973',\n" +
+                "                'webSite' : 'http://www.galerias.com.ni',\n" +
+                "                'photo' : 'https://lh5.googleusercontent.com/p/AF1QipMJLS9UryEMUMehmqyw9RdkE2x09fALdQcHZmGd=w520-h240-k-no',\n" +
                 "                'evento' : 'GP de España',\n" +
                 "                'categoria' : 'Carrera'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'hora' : '09:46',\n" +
+                "                'lugar' : 'Galerías Santo Domingo',\n" +
+                "                'direccion' : 'Managua, Nicaragua',\n" +
+                "                'latitud' : 12.103822159374769,\n" +
+                "                'longitud' : -86.24928744561913,\n" +
+                "                'telefono' : '22700973',\n" +
+                "                'webSite' : 'http://www.galerias.com.ni',\n" +
+                "                'photo' : 'https://lh5.googleusercontent.com/p/AF1QipMJLS9UryEMUMehmqyw9RdkE2x09fALdQcHZmGd=w520-h240-k-no',\n" +
                 "                'evento' : 'GP de MIAMI',\n" +
                 "                'categoria' : 'Carrera'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'hora' : '11:30',\n" +
+                "                'lugar' : 'Centro de Arte Fundación Ortiz Gurdián',\n" +
+                "                'direccion' : 'León, Nicaragua',\n" +
+                "                'latitud' : 12.435021697165867,\n" +
+                "                'longitud' : -86.8819260032871,\n" +
+                "                'telefono' : '22700973',\n" +
+                "                'webSite' : 'http://www.fundacionortizgurdian.org',\n" +
+                "                'photo' : 'https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no',\n" +
                 "                'evento' : 'GP de Austria',\n" +
                 "                'categoria' : 'Carrera'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'hora' : '16:06',\n" +
+                "                'lugar' : 'Centro de Arte Fundación Ortiz Gurdián',\n" +
+                "                'direccion' : 'León, Nicaragua',\n" +
+                "                'latitud' : 12.435021697165867,\n" +
+                "                'longitud' : -86.8819260032871,\n" +
+                "                'telefono' : '22700973',\n" +
+                "                'webSite' : 'http://www.fundacionortizgurdian.org',\n" +
+                "                'photo' : 'https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no',\n" +
                 "                'evento' : 'GP de Belgica',\n" +
                 "                'categoria' : 'Carrera'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'hora' : '17:13',\n" +
+                "                'lugar' : 'Centro de Arte Fundación Ortiz Gurdián',\n" +
+                "                'direccion' : 'León, Nicaragua',\n" +
+                "                'latitud' : 12.435021697165867,\n" +
+                "                'longitud' : -86.8819260032871,\n" +
+                "                'telefono' : '22700973',\n" +
+                "                'webSite' : 'http://www.fundacionortizgurdian.org',\n" +
+                "                'photo' : 'https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no',\n" +
                 "                'evento' : 'GP de Italia',\n" +
                 "                'categoria' : 'Carrera'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'hora' : '19:09',\n" +
+                "                'lugar' : 'Centro de Arte Fundación Ortiz Gurdián',\n" +
+                "                'direccion' : 'León, Nicaragua',\n" +
+                "                'latitud' : 12.435021697165867,\n" +
+                "                'longitud' : -86.8819260032871,\n" +
+                "                'telefono' : '22700973',\n" +
+                "                'webSite' : 'http://www.fundacionortizgurdian.org',\n" +
+                "                'photo' : 'https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no',\n" +
                 "                'evento' : 'GP de Singapur',\n" +
                 "                'categoria' : 'Carrera'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'hora' : '19:57',\n" +
+                "                'lugar' : 'Centro de Arte Fundación Ortiz Gurdián',\n" +
+                "                'direccion' : 'León, Nicaragua',\n" +
+                "                'latitud' : 12.435021697165867,\n" +
+                "                'longitud' : -86.8819260032871,\n" +
+                "                'telefono' : '22700973',\n" +
+                "                'webSite' : 'http://www.fundacionortizgurdian.org',\n" +
+                "                'photo' : 'https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no',\n" +
                 "                'evento' : 'GP de Brasil',\n" +
                 "                'categoria' : 'Carrera'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'hora' : '20:13',\n" +
+                "                'lugar' : 'Centro de Arte Fundación Ortiz Gurdián',\n" +
+                "                'direccion' : 'León, Nicaragua',\n" +
+                "                'latitud' : 12.435021697165867,\n" +
+                "                'longitud' : -86.8819260032871,\n" +
+                "                'telefono' : '22700973',\n" +
+                "                'webSite' : 'http://www.fundacionortizgurdian.org',\n" +
+                "                'photo' : 'https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no',\n" +
                 "                'evento' : 'GP de Japon',\n" +
                 "                'categoria' : 'Carrera'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'hora' : '20:50',\n" +
+                "                'lugar' : 'Centro de Arte Fundación Ortiz Gurdián',\n" +
+                "                'direccion' : 'León, Nicaragua',\n" +
+                "                'latitud' : 12.435021697165867,\n" +
+                "                'longitud' : -86.8819260032871,\n" +
+                "                'telefono' : '22700973',\n" +
+                "                'webSite' : 'http://www.fundacionortizgurdian.org',\n" +
+                "                'photo' : 'https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no',\n" +
                 "                'evento' : 'GP de Francia',\n" +
                 "                'categoria' : 'Carrera'\n" +
                 "            }\n" +
@@ -200,6 +291,13 @@ class MenuActivity : AppCompatActivity() {
             Evento.Hora = objevento.getString("hora")
             Evento.Evento = objevento.getString("evento")
             Evento.Categoria = objevento.getString("categoria")
+            Evento.Direccion = objevento.getString("direccion")
+            Evento.Latitud = objevento.getDouble("latitud")
+            Evento.Longitud = objevento.getDouble("longitud")
+            Evento.Telefono = objevento.getString("telefono")
+            Evento.Lugar = objevento.getString("lugar")
+            Evento.Photo = objevento.getString("photo")
+            Evento.WebSite = objevento.getString("webSite")
             firesbaseFirestore.collection("eventos").document().set(Evento)
         }
 

@@ -64,5 +64,14 @@
         android:id="@+id/meventUbicationFragment"
         android:name="com.laboratorios.lab56.views.ui.EventUbicationFragment"
         android:label="fragment_event_ubication"
-        tools:layout="@layout/fragment_event_ubication" />
+        tools:layout="@layout/fragment_event_ubication" >
+        <action
+            android:id="@+id/action_meventUbicationFragment_to_mubicationDetFragment"
+            app:destination="@id/mubicationDetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mubicationDetFragment"
+        android:name="com.laboratorios.lab56.views.ui.UbicationDetFragment"
+        android:label="fragment_ubication_det"
+        tools:layout="@layout/fragment_ubication_det" />
 </navigation>
