@@ -4,6 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -44,15 +46,31 @@ class adapter_galeria(val GaleriaListener: galeriaListener):
         ViewHolder( LayoutInflater.from(parent.context).inflate(R.layout.item_galeria,parent,false))
 
     //Assign de item property in the holder
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, @SuppressLint("RecyclerView") position: Int) {
 
         val Pintura:pintura = listGaleria[position]
         holder.artistaPintura.text = Pintura.ArtistaPintura
         holder.titulopintura.text = Pintura.TituloPintura
         holder.precioPintura.text = Pintura.PrecioPintura
         Picasso.get().load(Pintura.UrlPintura).into(holder.fotoPintura)
-        holder.fotoPintura.setOnClickListener{
-            GaleriaListener.onGaleriaClicked(Pintura,position)
+        holder.fotoPintura.setOnClickListener{ view ->
+            val animationItem = AnimationUtils.loadAnimation(view.context, R.anim.itemevent_animation)
+            view.startAnimation(animationItem)
+
+            animationItem.setAnimationListener(object: Animation.AnimationListener{
+                override fun onAnimationStart(animation: Animation?) {
+
+                }
+
+                override fun onAnimationEnd(animation: Animation?) {
+                    GaleriaListener.onGaleriaClicked(Pintura,position)
+                }
+
+                override fun onAnimationRepeat(animation: Animation?) {
+
+                }
+            })
+
         }
 
     }

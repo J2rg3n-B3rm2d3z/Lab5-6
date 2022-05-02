@@ -69,7 +69,7 @@ class MenuActivity : AppCompatActivity() {
                 "                'categoria' : 'Carrera'\n" +
                 "            },\n" +
                 "            {\n" +
-                "                'hora' : '07:52.',\n" +
+                "                'hora' : '07:52',\n" +
                 "                'lugar' : 'Centro Cultural Mercado de Artesanías',\n" +
                 "                'direccion' : 'Masaya, Nicaragua',\n" +
                 "                'latitud' : 11.974114551016928,\n" +
@@ -194,60 +194,70 @@ class MenuActivity : AppCompatActivity() {
                 "            {\n" +
                 "                'nombreartista' : 'George Russell',\n" +
                 "                'categoriaartista' : 'Mercedes',\n" +
+                "                'imageurlartista' : 'https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no',\n" +
                 "                'detalleartista' : '(Texto de relleno) Nací en España Madrid, soy corredor para el equipo de Ferrari de formula1, esta pasión fue inspirada en gran parte gracias a mi padre que me enseño sus pasos',\n"+
                 "                'paisartista' : 'España'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'nombreartista' : 'Lewis Hamilton',\n" +
                 "                'categoriaartista' : 'Mercedes',\n" +
+                "                'imageurlartista' : 'https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no',\n" +
                 "                'detalleartista' : '(Texto de relleno) Nací en España Madrid, soy corredor para el equipo de Ferrari de formula1, esta pasión fue inspirada en gran parte gracias a mi padre que me enseño sus pasos',\n"+
                 "                'paisartista' : 'España'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'nombreartista' : 'Fernando Alonso',\n" +
                 "                'categoriaartista' : 'Alpine',\n" +
+                "                'imageurlartista' : 'https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no',\n" +
                 "                'detalleartista' : '(Texto de relleno) Nací en España Madrid, soy corredor para el equipo de Ferrari de formula1, esta pasión fue inspirada en gran parte gracias a mi padre que me enseño sus pasos',\n"+
                 "                'paisartista' : 'España'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'nombreartista' : 'Esteban Ocon',\n" +
                 "                'categoriaartista' : 'Alpine',\n" +
+                "                'imageurlartista' : 'https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no',\n" +
                 "                'detalleartista' : '(Texto de relleno) Nací en España Madrid, soy corredor para el equipo de Ferrari de formula1, esta pasión fue inspirada en gran parte gracias a mi padre que me enseño sus pasos',\n"+
                 "                'paisartista' : 'España'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'nombreartista' : 'Kevin Magnussen',\n" +
                 "                'categoriaartista' : 'Haas',\n" +
+                "                'imageurlartista' : 'https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no',\n" +
                 "                'detalleartista' : '(Texto de relleno) Nací en España Madrid, soy corredor para el equipo de Ferrari de formula1, esta pasión fue inspirada en gran parte gracias a mi padre que me enseño sus pasos',\n"+
                 "                'paisartista' : 'Alemania'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'nombreartista' : 'Mick Schumacher',\n" +
                 "                'categoriaartista' : 'Haas',\n" +
+                "                'imageurlartista' : 'https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no',\n" +
                 "                'detalleartista' : '(Texto de relleno) Nací en España Madrid, soy corredor para el equipo de Ferrari de formula1, esta pasión fue inspirada en gran parte gracias a mi padre que me enseño sus pasos',\n"+
                 "                'paisartista' : 'Nueva Zelanda'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'nombreartista' : 'Daniel Ricciardo',\n" +
                 "                'categoriaartista' : 'Mclaren',\n" +
+                "                'imageurlartista' : 'https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no',\n" +
                 "                'detalleartista' : '(Texto de relleno) Nací en España Madrid, soy corredor para el equipo de Ferrari de formula1, esta pasión fue inspirada en gran parte gracias a mi padre que me enseño sus pasos',\n"+
                 "                'paisartista' : 'Australia'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'nombreartista' : 'Lando Norris',\n" +
                 "                'categoriaartista' : 'Mclaren',\n" +
+                "                'imageurlartista' : 'https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no',\n" +
                 "                'detalleartista' : '(Texto de relleno) Nací en España Madrid, soy corredor para el equipo de Ferrari de formula1, esta pasión fue inspirada en gran parte gracias a mi padre que me enseño sus pasos',\n"+
                 "                'paisartista' : 'Australia'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'nombreartista' : 'Valtteri Bottas',\n" +
                 "                'categoriaartista' : 'Alfa Romeo',\n" +
+                "                'imageurlartista' : 'https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no',\n" +
                 "                'detalleartista' : '(Texto de relleno) Nací en España Madrid, soy corredor para el equipo de Ferrari de formula1, esta pasión fue inspirada en gran parte gracias a mi padre que me enseño sus pasos',\n"+
                 "                'paisartista' : 'Finlandia'\n" +
                 "            },\n" +
                 "            {\n" +
                 "                'nombreartista' : 'Guanyu Zhou',\n" +
                 "                'categoriaartista' : 'Alfa Romeo',\n" +
+                "                'imageurlartista' : 'https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no',\n" +
                 "                'detalleartista' : '(Texto de relleno) Nací en España Madrid, soy corredor para el equipo de Ferrari de formula1, esta pasión fue inspirada en gran parte gracias a mi padre que me enseño sus pasos',\n"+
                 "                'paisartista' : 'Finlandia'\n" +
                 "            }\n" +
@@ -310,6 +320,7 @@ class MenuActivity : AppCompatActivity() {
             Artista.ArtistaCategoria = objArtista.getString("categoriaartista")
             Artista.ArtistaPais = objArtista.getString("paisartista")
             Artista.ArtistaDetalle = objArtista.getString("detalleartista")
+            Artista.ArtistaUrlImage = objArtista.getString("imageurlartista")
             firesbaseFirestore.collection("artistas").document().set(Artista)
         }
 
@@ -326,8 +337,8 @@ class MenuActivity : AppCompatActivity() {
             Galeria.DetallePintura = objGaleria.getString("detallepintura")
             firesbaseFirestore.collection("galerias").document().set(Galeria)
         }
-        */
 
+        */
     }
 
     private fun configurarNavegacion()

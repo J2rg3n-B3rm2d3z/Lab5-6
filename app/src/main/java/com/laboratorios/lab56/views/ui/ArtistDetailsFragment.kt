@@ -15,6 +15,7 @@ import com.laboratorios.lab56.R
 import com.laboratorios.lab56.databinding.FragmentArtistDetailsBinding
 import com.laboratorios.lab56.model.artista
 import com.laboratorios.lab56.model.pintura
+import com.squareup.picasso.Picasso
 
 class ArtistDetailsFragment : DialogFragment() {
 
@@ -36,6 +37,7 @@ class ArtistDetailsFragment : DialogFragment() {
         binding.tvNombrePerfil.text = Artista.ArtistaNombre
         binding.tvCiudadPerfil.text = Artista.ArtistaPais
         binding.tvDescripcionAcerca.text = Artista.ArtistaDetalle
+        Picasso.get().load(Artista.ArtistaUrlImage).into(binding.imgPerfil)
 
 
         //Code to use the button to open n close

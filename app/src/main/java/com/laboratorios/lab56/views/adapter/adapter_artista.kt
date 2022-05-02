@@ -3,6 +3,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.laboratorios.lab56.R
@@ -24,7 +26,7 @@ class adapter_artista(private val ArtistaListener: artista_listener) :
 
     //return the view in the fragment
 
-    override fun onBindViewHolder(holder: ArtistaViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ArtistaViewHolder, @SuppressLint("RecyclerView") position: Int) {
         //
         val Artista: artista = listArtista[position]
         holder.artistaNombre.text = Artista.ArtistaNombre
@@ -32,7 +34,23 @@ class adapter_artista(private val ArtistaListener: artista_listener) :
         holder.artistaPais.text = Artista.ArtistaPais
 
         holder.itemView.setOnClickListener { view ->
-            ArtistaListener.onArtistaClicked(Artista, position)
+
+            val animationItem = AnimationUtils.loadAnimation(view.context, R.anim.itemevent_animation)
+            view.startAnimation(animationItem)
+
+            animationItem.setAnimationListener(object: Animation.AnimationListener{
+                override fun onAnimationStart(animation: Animation?) {
+
+                }
+
+                override fun onAnimationEnd(animation: Animation?) {
+                    ArtistaListener.onArtistaClicked(Artista, position)
+                }
+
+                override fun onAnimationRepeat(animation: Animation?) {
+
+                }
+            })
         }
     }
 

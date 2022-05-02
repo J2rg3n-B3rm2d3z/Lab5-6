@@ -12,4 +12,5 @@ class artista: Serializable {
     var ArtistaCategoria:String=""
     var ArtistaPais:String=""
     var ArtistaDetalle:String=""
+    var ArtistaUrlImage:String=""
 }
