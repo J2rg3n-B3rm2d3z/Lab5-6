@@ -79,7 +79,7 @@
                 app:helperText="@string/Requerido"
                 app:helperTextTextColor="@color/design_default_color_error"
                 app:counterEnabled="true"
-                app:counterMaxLength="8"
+                app:counterMaxLength="15"
                 app:passwordToggleEnabled="true"
                 android:layout_marginTop="@dimen/margentop">
                 <com.google.android.material.textfield.TextInputEditText
@@ -89,7 +89,7 @@
                     android:hint="@string/hPassword"
                     android:drawablePadding="@dimen/margender"
                     android:drawableStart="@drawable/ic_password_red"
-                    android:maxLength="8"
+                    android:maxLength="15"
                     android:gravity="start|center_horizontal"
                     android:inputType="textPassword"/>
             </com.google.android.material.textfield.TextInputLayout>

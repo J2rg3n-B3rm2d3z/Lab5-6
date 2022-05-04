@@ -5,6 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
+import android.widget.Toast
+import com.google.android.play.core.tasks.OnCompleteListener
+import com.google.firebase.auth.AuthResult
+import com.google.firebase.auth.FirebaseAuth
 import com.laboratorios.lab56.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -56,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
     private fun validpasssword(): String? {
         val passwordText = binding.password.text.toString()
 
-        return if(passwordText.length<3)
+        return /*if(passwordText.length<3)
             "Minimo 3 caracteres"
         else if(passwordText.length>8)
             "Maximo 8 caracteres"
@@ -65,7 +69,7 @@ class LoginActivity : AppCompatActivity() {
             "Debe tener letras"
         else if(!passwordText.matches(".*[0-9].*".toRegex()))
             "Debe tener digitos"
-        else if(passwordText=="")
+        else */if(passwordText=="")
             "Requerido"
         else
             null
@@ -75,18 +79,26 @@ class LoginActivity : AppCompatActivity() {
 
     fun onClickArteLista (view: View){
 
-        val passwordText = binding.password.text.toString()
+        //val passwordText = binding.password.text.toString()
         val userText = binding.tvUserName.text.toString()
 
-        if(Patterns.EMAIL_ADDRESS.matcher(userText).matches() && passwordText.length >= 3 &&
+        if(Patterns.EMAIL_ADDRESS.matcher(userText).matches() /*&& passwordText.length >= 3 &&
             passwordText.length <= 8 &&
             (passwordText.matches(".*[a-z].*".toRegex()) ||
                     passwordText.matches(".*[A-Z].*".toRegex())) &&
-            passwordText.matches(".*[0-9].*".toRegex())){
-
-            val intent = Intent(this, MenuActivity::class.java)
-            startActivity(intent)
-
+            passwordText.matches(".*[0-9].*".toRegex())*/){
+            val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
+            firebaseAuth.signInWithEmailAndPassword(binding.tvUserName.text.toString(), binding.password.text.toString()).
+            addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    startActivity(Intent(this, MenuActivity::class.java))
+                    Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show()
+                    binding.tvUserName.setText("")
+                    binding.password.setText("")
+                } else {
+                    Toast.makeText(this, "El usuario y clave no existen", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
     }
 

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import com.google.firebase.auth.FirebaseAuth
 import com.laboratorios.lab56.databinding.ActivityCreateAccountBinding
 
 class CreateAccountActivity : AppCompatActivity() {
@@ -41,19 +42,35 @@ class CreateAccountActivity : AppCompatActivity() {
             val passwordText = binding.tvPasswordCuenta.text.toString()
             val passwordTextConfirmar = binding.tvConfirmarPassword.text.toString()
 
-            if(Patterns.EMAIL_ADDRESS.matcher(userText).matches() && passwordText.length >= 3 &&
-                passwordText.length <= 8 &&
+            if(Patterns.EMAIL_ADDRESS.matcher(userText).matches() && passwordText.length >= 6 &&
+                passwordText.length <= 15 &&
                 (passwordText.matches(".*[a-z].*".toRegex()) ||
                         passwordText.matches(".*[A-Z].*".toRegex())) &&
                 passwordText.matches(".*[0-9].*".toRegex()) &&
                 passwordText == passwordTextConfirmar) {
-
-                Toast.makeText(this, "El usuario ha sido creado", Toast.LENGTH_SHORT).show()
+                Addcuenta()
                 finish()
             }
+            else
+                Toast.makeText(this, "Error al registrarse", Toast.LENGTH_SHORT).show();
         }
-
     }
+    fun Addcuenta()
+    {
+
+        val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
+        firebaseAuth.createUserWithEmailAndPassword(binding.tvEmailCuenta.text.toString(), binding.tvPasswordCuenta.text.toString())
+            .addOnCompleteListener { task -> if (task.isSuccessful) {
+                Toast.makeText(this, "El usuario ha sido creado", Toast.LENGTH_SHORT).show();
+                finish()
+            }
+            else {
+                    Toast.makeText(this, "El usuario no ha sido creado", Toast.LENGTH_SHORT).show();
+                }
+            }
+    }
+
+
 
     //Si el campo esta enfocado
 
@@ -87,10 +104,10 @@ class CreateAccountActivity : AppCompatActivity() {
     private fun validpasssword(): String? {
         val passwordText = binding.tvPasswordCuenta.text.toString()
 
-        return if(passwordText.length<3)
-            "Minimo 3 caracteres"
-        else if(passwordText.length>8)
-            "Maximo 8 caracteres"
+        return if(passwordText.length<6)
+            "Minimo 6 caracteres"
+        else if(passwordText.length>15)
+            "Maximo 15 caracteres"
         else if(!passwordText.matches(".*[a-z].*".toRegex()) &&
             !passwordText.matches(".*[A-Z].*".toRegex()))
             "Debe tener letras"
